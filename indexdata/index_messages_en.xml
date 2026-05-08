@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="en_project_title"><![CDATA[New Project]]></data>
+
+
+
+  <data name="en_pano9_title"><![CDATA[20260410_170804_631 панорама]]></data>
+  <data name="en_spotpoint310openurlwebsiteurl"><![CDATA[https://vk.com/itcubeugo]]></data>
+
+
+  <data name="en_pano13_title"><![CDATA[20260410_170803_820 панорама]]></data>
+  <data name="en_spotpoint313openurlwebsiteurl"><![CDATA[https://chessday.ru/play-online/computer]]></data>
+  <data name="en_spotpoint314openurlwebsiteurl"><![CDATA[https://onshashki.com/playground/game-with-computer]]></data>
+
+
+  <data name="en_pano19_title"><![CDATA[20260410_170759_678 панорама]]></data>
+
+
+  <data name="en_pano21_title"><![CDATA[20260410_170800_753 панорама]]></data>
+
+
+  <data name="en_pano28_title"><![CDATA[20260410_170812_293 панорама]]></data>
+
+  <data name="en_panogroup31_title"><![CDATA[Group 31]]></data>
+
+  <data name="en_pano30_title"><![CDATA[20260410_170813_165 панорама]]></data>
+  <data name="en_pano38_title"><![CDATA[20260410_170810_339 панорама]]></data>
+
+
+  <data name="en_pano36_title"><![CDATA[20260410_170814_262 панорама]]></data>
+  <data name="en_spotpoint315openurlwebsiteurl"><![CDATA[https://progolovolomki.ru/speed/zmejka/]]></data>
+
+
+  <data name="en_pano95_title"><![CDATA[Л.Эт]]></data>
+
+
+  <data name="en_pano99_title"><![CDATA[Коворкинг]]></data>
+
+
+  <data name="en_pano51_title"><![CDATA[20260327_181745_923 панорама]]></data>
+  <data name="en_spotpoint316openurlwebsiteurl"><![CDATA[https://yandex.ru/games/app/427994]]></data>
+
+
+  <data name="en_pano54_title"><![CDATA[20260327_181736_935 панорама]]></data>
+
+
+  <data name="en_pano47_title"><![CDATA[20260410_170805_512 панорама]]></data>
+
+
+  <data name="en_pano106_title"><![CDATA[20260327_181718_468 панорама]]></data>
+
+
+  <data name="en_pano111_title"><![CDATA[Сис.админ.]]></data>
+
+
+  <data name="en_pano11_title"><![CDATA[20260410_170806_326 панорама]]></data>
+
+
+
+
+
+
+  <data name="en_controlBar_urbanprevSceneTip"><![CDATA[Previous panorama]]></data>
+  <data name="en_controlBar_urbannextSceneTip"><![CDATA[Next panorama]]></data>
+  <data name="en_controlBar_urbanzoomInTip"><![CDATA[Zoom in]]></data>
+  <data name="en_controlBar_urbanzoomOutTip"><![CDATA[Zoom out]]></data>
+  <data name="en_controlBar_urbanmoveLeftTip"><![CDATA[Move left]]></data>
+  <data name="en_controlBar_urbanmoveRightTip"><![CDATA[Move right]]></data>
+  <data name="en_controlBar_urbanmoveUpTip"><![CDATA[Move up]]></data>
+  <data name="en_controlBar_urbanmoveDownTip"><![CDATA[Move down]]></data>
+  <data name="en_controlBar_urbanopenFsTip"><![CDATA[Enter fullscreen]]></data>
+  <data name="en_controlBar_urbancloseFsTip"><![CDATA[Exit fullscreen]]></data>
+  <data name="en_controlBar_urbanautorotateOnTip"><![CDATA[Start autorotation]]></data>
+  <data name="en_controlBar_urbanautorotateOffTip"><![CDATA[Stop autorotation]]></data>
+  <data name="en_controlBar_urbandisplayHelpTip"><![CDATA[Show help screen]]></data>
+  <data name="en_controlBar_urbanhideHelpTip"><![CDATA[Hide help screen]]></data>
+  <data name="en_controlBar_urbandisplayControlsTip"><![CDATA[Show controls]]></data>
+  <data name="en_controlBar_urbanhideControlsTip"><![CDATA[Hide controls]]></data>
+  <data name="en_controlBar_urbanctrlmodeDragTip"><![CDATA[Change control mode]]></data>
+  <data name="en_controlBar_urbanctrlmodeMoveTip"><![CDATA[Change control mode]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>

@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.17">
+
+    
+  <!-- Spot Style - Default Point Spot Style 1 -->
+  <style name="IconDefaultPointSpotStyle1"
+         url="%FIRSTXML%/spots/hotspot_direction_user_defaultpoint0.png"
+         visible="false"
+
+
+         onhover="onhoverIconDefaultPointSpotStyle1"
+         onout="onoutIconDefaultPointSpotStyle1"
+         />
+  <action name="onhoverIconDefaultPointSpotStyle1">
+    showtooltip(hotspot);
+  </action>
+  <action name="onoutIconDefaultPointSpotStyle1">
+    hideTooltip();
+
+
+
+  </action>
+
+    
+  <!-- Spot Style - Default Point Spot Style 2 -->
+  <style name="IconDefaultPointSpotStyle2"
+         url="%FIRSTXML%/spots/hotspot_neutral_user_defaultpoint1.png"
+         visible="false"
+
+
+         onhover="onhoverIconDefaultPointSpotStyle2"
+         onout="onoutIconDefaultPointSpotStyle2"
+         />
+  <action name="onhoverIconDefaultPointSpotStyle2">
+    showtooltip(hotspot);
+  </action>
+  <action name="onoutIconDefaultPointSpotStyle2">
+    hideTooltip();
+
+
+
+  </action>
+
+    
+  <!-- Spot Style - Default Point Spot Style 3 -->
+  <style name="IconDefaultPointSpotStyle3"
+         url="%FIRSTXML%/spots/hotspot_image_user_defaultpoint2.png"
+         visible="false"
+
+
+         onhover="onhoverIconDefaultPointSpotStyle3"
+         onout="onoutIconDefaultPointSpotStyle3"
+         />
+  <action name="onhoverIconDefaultPointSpotStyle3">
+    showtooltip(hotspot);
+  </action>
+  <action name="onoutIconDefaultPointSpotStyle3">
+    hideTooltip();
+
+
+
+  </action>
+
+    
+  <!-- Spot Style - Default Point Spot Style 4 -->
+  <style name="IconDefaultPointSpotStyle4"
+         url="%FIRSTXML%/spots/hotspot_neutral_user_defaultpoint3.png"
+         visible="false"
+
+
+         onhover="onhoverIconDefaultPointSpotStyle4"
+         onout="onoutIconDefaultPointSpotStyle4"
+         />
+  <action name="onhoverIconDefaultPointSpotStyle4">
+    showtooltip(hotspot);
+  </action>
+  <action name="onoutIconDefaultPointSpotStyle4">
+    hideTooltip();
+
+
+
+  </action>
+
+    
+  <!-- Spot Style - Default Point Spot Style 5 -->
+  <style name="IconDefaultPointSpotStyle5"
+         url="%FIRSTXML%/spots/hotspot_information_user_defaultpoint4.png"
+         visible="false"
+
+
+         onhover="onhoverIconDefaultPointSpotStyle5"
+         onout="onoutIconDefaultPointSpotStyle5"
+         />
+  <action name="onhoverIconDefaultPointSpotStyle5">
+    showtooltip(hotspot);
+  </action>
+  <action name="onoutIconDefaultPointSpotStyle5">
+    hideTooltip();
+
+
+
+  </action>
+
+  <!-- ***************** -->
+  <!-- Urban Control Bar -->
+  <!-- ***************** -->
+
+
+  <krpano theme12barbuilt="false" theme12backgroundwidthwhenclosed="0" theme12backgroundwidthwhenopened="0" theme12IsOpened="false" />
+  <events name="theme12barevents" onxmlcomplete="theme12buildMenuBar();" keep="true"/>
+  <action name="theme12buildMenuBar">
+    ifnot (theme12barbuilt, theme12buildMenu(); set(theme12barbuilt, true););
+  </action>
+
+  <style name="theme12_btn_style"
+         keep="true"
+         edge="right"
+         align="right"
+         x="0" y="0"
+         height="40" width="40"
+         crop="0|0|50|50"
+         onovercrop="0|50|50|50"
+         ondowncrop="0|100|50|50"
+         onhover="showTooltip(bottom, theme12menuTooltipStyle, bottom);"
+         onout="hideTooltip();"
+         />
+
+    <layer name="theme12_menu_bg"
+            keep="true"
+            type="container"
+            zorder="0"
+            width="40"
+            height="40"
+            align="bottom"
+            x="0" y="10"
+            maskchildren="true"
+            rotate="0"
+            visible="false"
+            >
+
+
+    <layer name="theme12btn_ctrlmode_move_to"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_move_to.png"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbanctrlmodeMoveTip"
+            onclick="setControlModeMoveTo();"
+            visible="false"
+            devices="desktop"
+            />
+    <layer name="theme12btn_ctrlmode_drag_to"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_drag_to.png"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbanctrlmodeDragTip"
+            onclick="setControlModeDragTo();"
+            visible="false"
+            devices="desktop"
+            />
+
+    <layer name="theme12btn_in"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_zoom_in.png"
+            ondown="set(fov_moveforce, -1);"
+            onup="set(fov_moveforce, 0);"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbanzoomInTip"
+            devices="desktop"
+            visible="false"
+            />
+    <layer name="theme12btn_out"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_zoom_out.png"
+            ondown="set(fov_moveforce, +1);"
+            onup="set(fov_moveforce, 0);"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbanzoomOutTip"
+            devices="desktop"
+            visible="false"
+            />
+
+    <layer name="theme12btn_left"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_move_left.png"
+            ondown="set(hlookat_moveforce, -1);"
+            onup="set(hlookat_moveforce, 0);"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbanmoveLeftTip"
+            devices="desktop"
+            visible="false"
+            />
+    <layer name="theme12btn_right"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_move_right.png"
+            ondown="set(hlookat_moveforce, +1);"
+            onup="set(hlookat_moveforce, 0);"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbanmoveRightTip"
+            devices="desktop"
+            visible="false"
+            />
+    <layer name="theme12btn_up"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_move_up.png"
+            ondown="set(vlookat_moveforce, -1);"
+            onup="set(vlookat_moveforce, 0);"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbanmoveUpTip"
+            devices="desktop"
+            visible="false"
+            />
+    <layer name="theme12btn_down"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_move_down.png"
+            ondown="set(vlookat_moveforce, +1);"
+            onup="set(vlookat_moveforce, 0);"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbanmoveDownTip"
+            devices="desktop"
+            visible="false"
+            x="0"
+            y="0"
+            />
+
+
+
+    <layer name="theme12btn_prev_pano"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_previous_scene.png"
+            onclick="loadPreviousScene();"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbanprevSceneTip"
+            visible="false"
+            />
+    <layer name="theme12btn_next_pano"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_next_scene.png"
+            onclick="loadNextScene();"
+            style="theme12_btn_style"
+            tooltip="controlBar_urbannextSceneTip"
+            visible="false"
+            />
+
+
+
+    <layer name="theme12btn_openfs"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_enter_fs.png"
+            onclick="enterFullscreen();"
+            style="theme12_btn_style"
+            visible="false"
+            devices="fullscreensupport"
+            tooltip="controlBar_urbanopenFsTip"
+            />
+    <layer name="theme12btn_closefs"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_close_fs.png"
+            onclick="exitFullscreen();"
+            style="theme12_btn_style"
+            visible="false"
+            devices="fullscreensupport"
+            tooltip="controlBar_urbancloseFsTip"
+            />
+
+    <layer name="theme12btn_autorotate_on"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_start_autorotation.png"
+            onclick="startautorotation();"
+            style="theme12_btn_style"
+            visible="false"
+            tooltip="controlBar_urbanautorotateOnTip"
+            />
+    <layer name="theme12btn_autorotate_off"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_stop_autorotation.png"
+            onclick="stopautorotation();"
+            style="theme12_btn_style"
+            visible="false"
+            tooltip="controlBar_urbanautorotateOffTip"
+            />
+
+
+
+    <layer name="theme12btn_display_help"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_help.png"
+            onclick="theme12displayHelp();"
+            style="theme12_btn_style"
+            devices="desktop"
+            visible="false"
+            tooltip="controlBar_urbandisplayHelpTip"
+            />
+    <layer name="theme12btn_close_help"
+            url="%FIRSTXML%/graphics/urbancontrolbar/btn_help.png"
+            onclick="theme12closeHelp();"
+            style="theme12_btn_style"
+            visible="false"
+            devices="desktop"
+            tooltip="controlBar_urbanhideHelpTip"
+            />
+
+
+
+    <layer name="theme12btn_hidecontrols"
+           url="%FIRSTXML%/graphics/urbancontrolbar/btn_hide_controls.png"
+           style="theme12_btn_style"
+           onclick="theme12hideMenuControls();hideTourControls();"
+           visible="false"
+           tooltip="controlBar_urbanhideControlsTip"
+           />
+    <layer name="theme12btn_showcontrols"
+           url="%FIRSTXML%/graphics/urbancontrolbar/btn_show_controls.png"
+           style="theme12_btn_style"
+           onclick="theme12showMenuControls();showTourControls();"
+           tooltip="controlBar_urbandisplayControlsTip"
+           visible="false"
+           />
+ </layer>
+
+
+
+
+  <events name="theme12controlmodechangedevent" oncontrolmodechanged="theme12updateControlModeButtons();" keep="true"/>
+	<action name="theme12HideControlModeButtons">
+		set(layer[theme12btn_ctrlmode_move_to].visible, false);
+		set(layer[theme12btn_ctrlmode_drag_to].visible, false);
+	</action>
+	<action name="theme12ShowControlModeButtons">
+		if (tour_controlmodemousetype == "moveto",
+			set(layer[theme12btn_ctrlmode_drag_to].visible, true);
+			set(layer[theme12btn_ctrlmode_move_to].visible, false);
+		,
+			set(layer[theme12btn_ctrlmode_move_to].visible, true);
+			set(layer[theme12btn_ctrlmode_drag_to].visible, false);
+		);
+	</action>
+	<action name="theme12updateControlModeButtons">
+	if (device.desktop,
+		set(theme12DisplayControlModeButtons, false);
+		if (theme12IsOpened, set(theme12DisplayControlModeButtons, true););
+		if (theme12DisplayControlModeButtons,
+			theme12ShowControlModeButtons();
+		,
+			theme12HideControlModeButtons();
+		);
+	,
+		theme12HideControlModeButtons();
+	);
+	</action>
+
+
+  <action name="theme12hideMenuControls">
+    set(theme12IsOpened, false);
+    set(layer[theme12btn_hidecontrols].visible, false);
+    set(layer[theme12btn_showcontrols].visible, true);
+if (scene.count GT 1,
+	set(layer[theme12btn_next_pano].visible, false);
+	set(layer[theme12btn_prev_pano].visible, false);
+);
+
+
+if (device.desktop,
+	set(layer[theme12btn_in].visible, false);
+	set(layer[theme12btn_out].visible, false);
+);
+if (device.desktop,
+	set(layer[theme12btn_up].visible, false);
+	set(layer[theme12btn_down].visible, false);
+);
+if (device.desktop,
+	set(layer[theme12btn_left].visible, false);
+	set(layer[theme12btn_right].visible, false);
+);
+	theme12updateFullscreenButtons();
+	theme12updateHelpButtons();
+
+
+	theme12updateAutorotationButtons();
+
+
+	theme12updateControlModeButtons();
+
+
+    set(layer[theme12_menu_bg].width , get(theme12backgroundwidthwhenclosed));
+  set(layer[theme12_menu_bg].visible, true);
+  </action>
+  <action name="theme12showMenuControls">
+    set(theme12IsOpened, true);
+    set(layer[theme12btn_hidecontrols].visible, true);
+    set(layer[theme12btn_showcontrols].visible, false);
+	set(layer[theme12_menu_bg].visible, true);
+if (scene.count GT 1,
+	set(layer[theme12btn_next_pano].visible, true);
+	set(layer[theme12btn_prev_pano].visible, true);
+);
+
+
+if (device.desktop,
+	set(layer[theme12btn_in].visible, true);
+	set(layer[theme12btn_out].visible, true);
+);
+if (device.desktop,
+	set(layer[theme12btn_up].visible, true);
+	set(layer[theme12btn_down].visible, true);
+);
+if (device.desktop,
+	set(layer[theme12btn_left].visible, true);
+	set(layer[theme12btn_right].visible, true);
+);
+	theme12updateFullscreenButtons();
+	theme12updateHelpButtons();
+
+
+	theme12updateAutorotationButtons();
+
+
+	theme12updateControlModeButtons();
+
+
+
+    set(layer[theme12_menu_bg].width, get(theme12backgroundwidthwhenopened));
+  </action>
+
+		<layer name="theme12helpScreenBg" align="center" keep="true" onclick="theme12closeHelp();" url="%FIRSTXML%/graphics/urbancontrolbar/help_screen_bg.png" visible="false" rotate="-25" height="50%" width="prop" zorder="97" displayed="false">
+			<layer name="theme12helpScreenShadow" align="center" keep="true" onclick="theme12closeHelp();" url="%FIRSTXML%/graphics/urbancontrolbar/help_screen_shadow.png"   rotate="12"  height="100%" width="prop" x="0" zorder="0" blendmode="multiply"/>
+			<layer name="theme12helpScreenMouse" align="center" keep="true" onclick="theme12closeHelp();" url="%FIRSTXML%/graphics/urbancontrolbar/help_screen_mouse.png" rotate="25"  height="100%" width="prop" x="0" zorder="1">
+				<layer name="theme12helpScreenKeyboard" align="center" keep="true" onclick="theme12closeHelp();" url="%FIRSTXML%/graphics/urbancontrolbar/help_screen_keyboard.png" rotate="-25" height="100%" width="prop" x="0">
+					<layer name="theme12helpScreenFg" align="center" keep="true" onclick="theme12closeHelp();" url="%FIRSTXML%/graphics/urbancontrolbar/help_screen_outline.png" rotate="45" height="100%" width="prop" x="0" onover="tween(rotate, 0, 0.2)" onout="tween(rotate, 2, 0.2)"/>
+				</layer>
+			</layer>
+		</layer>
+
+	<action name="theme12displayHelp">
+	if (device.desktop,
+		set(layer[theme12helpScreenBg].displayed, true);
+		set(layer[theme12helpScreenBg].visible, true);
+		set(layer[theme12helpScreenShadow].visible, true);
+		set(layer[theme12helpScreenMouse].visible, true);
+		set(layer[theme12helpScreenKeyboard].visible, true);
+		set(layer[theme12helpScreenFg].visible , true);
+		tween(layer[theme12helpScreenBg].rotate, 0, 1);
+		tween(layer[theme12helpScreenShadow].rotate, 0, 1);
+		tween(layer[theme12helpScreenMouse].rotate, 0, 1);
+		tween(layer[theme12helpScreenKeyboard].rotate, 0, 1);
+		tween(layer[theme12helpScreenFg].rotate, 2, 1);
+		theme12updateHelpButtons();
+	);
+	</action>
+	<action name="theme12closeHelp">
+	if (device.desktop,
+		set(layer[theme12helpScreenBg].displayed, false);
+		tween(layer[theme12helpScreenKeyboard].rotate, -25, 1, easeOutQuad, set(layer[theme12helpScreenKeyboard].visible,false););
+		tween(layer[theme12helpScreenMouse].rotate, 25, 1, easeOutQuad, set(layer[theme12helpScreenMouse].visible,false););
+		tween(layer[theme12helpScreenShadow].rotate, 12, 1, easeOutQuad, set(layer[theme12helpScreenShadow].visible,false););
+		tween(layer[theme12helpScreenFg].rotate, 45, 1, easeOutQuad, set(layer[theme12helpScreenFg].visible,false););
+		tween(layer[theme12helpScreenBg].rotate, -25, 1, easeOutQuad, set(layer[theme12helpScreenBg].visible,false););
+		theme12updateHelpButtons();
+	);
+	</action>
+	<action name="theme12HideHelpButtons">
+		set(layer[theme12btn_display_help].visible, false);
+		set(layer[theme12btn_close_help].visible, false);
+	</action>
+	<action name="theme12ShowHelpButtons">
+		if (layer[theme12helpScreenBg].displayed,
+			set(layer[theme12btn_close_help].visible, true);
+			set(layer[theme12btn_display_help].visible, false);
+		,
+			set(layer[theme12btn_display_help].visible, true);
+			set(layer[theme12btn_close_help].visible, false);
+		);
+	</action>
+	<action name="theme12updateHelpButtons">
+	if (device.desktop,
+		set(theme12DisplayHelpButtons, false);
+		if (theme12IsOpened, set(theme12DisplayHelpButtons, true););
+		if (theme12DisplayHelpButtons,
+			theme12ShowHelpButtons();
+		,
+			theme12HideHelpButtons();
+		);
+	,
+		theme12HideHelpButtons();
+	);
+	</action>
+
+
+
+  <events name="theme12menufullscreenchangeevent"
+          onenterfullscreen="theme12updateFullscreenButtons();"
+          onexitfullscreen="theme12updateFullscreenButtons();"
+          keep="true"/>
+	<action name="theme12HideFullscreenButtons">
+		set(layer[theme12btn_openfs].visible , false);
+		set(layer[theme12btn_closefs].visible, false);
+	</action>
+	<action name="theme12ShowFullscreenButtons">
+		if (device.fullscreensupport,
+			if(tour_fullscreen,
+				set(layer[theme12btn_openfs].visible , false);
+				set(layer[theme12btn_closefs].visible, true);
+			,
+				set(layer[theme12btn_openfs].visible ,true);
+				set(layer[theme12btn_closefs].visible,false);
+			);
+		,
+			theme12HideFullscreenButtons();
+		);
+	</action>
+	<action name="theme12updateFullscreenButtons">
+		set(theme12DisplayFullscreenButtons, false);
+		if (theme12IsOpened, set(theme12DisplayFullscreenButtons, true););
+		if (theme12DisplayFullscreenButtons,
+			theme12ShowFullscreenButtons();
+		,
+			theme12HideFullscreenButtons();
+		);
+	</action>
+
+	<events name="theme12AutorotationEvents"
+		onstartautorotation="theme12updateAutorotationButtons();"
+		onresumeautorotation="theme12updateAutorotationButtons();"
+		onstopautorotation="theme12updateAutorotationButtons();"
+		onpauseautorotation="theme12updateAutorotationButtons();"
+		keep="true"/>
+	<action name="theme12HideAutorotationButtons">
+		set(layer[theme12btn_autorotate_off].visible, false);
+		set(layer[theme12btn_autorotate_on].visible , false);
+	</action>
+	<action name="theme12ShowAutorotationButtons">
+		if(tour_autorotateenabled==false,
+			set(layer[theme12btn_autorotate_off].visible, false);
+			set(layer[theme12btn_autorotate_on].visible , true);
+		,
+			set(layer[theme12btn_autorotate_off].visible, true);
+			set(layer[theme12btn_autorotate_on].visible , false);
+		);
+	</action>
+	<action name="theme12updateAutorotationButtons">
+		set(theme12DisplayAutorotationButtons, false);
+		if (theme12IsOpened, set(theme12DisplayAutorotationButtons, true););
+		if (theme12DisplayAutorotationButtons,
+			theme12ShowAutorotationButtons();
+		,
+			theme12HideAutorotationButtons();
+		);
+	</action>
+
+
+
+  <textstyle name="theme12menuTooltipStyle"
+             font="Helvetica"
+             fontsize="16"
+             bold="true"
+             italic="false"
+             background="false"
+             border="false"
+             alpha="1"
+             textcolor="0xff9321"
+             effect="dropshadow(2,45,0x000000,4,1);"
+             origin="cursor"
+             edge="bottom"
+             yoffset="-20"
+             xoffset="0"
+             noclip="true"/>
+
+<layer name="theme12menuTooltipStyle"
+	keep="true"
+	enabled="false"
+	capture="false"
+	url="%FIRSTXML%/graphics/textfield.swf"
+	align="center"
+	background="true"
+	backgroundcolor="0x000000"
+	backgroundalpha="0.3"
+	border="false"
+	bordercolor="0xffffff"
+	css="color:#ff9321;font-family:Helvetica;font-weight:bold;font-size:16px;text-align:center;"
+	width="200"
+	height="20"
+	autoheight="true"
+		edge="bottom"
+	selectable="false"
+	textshadow="1.0"
+	zorder="0"
+	visible="false"
+	html=""
+	devices="html5"
+/>
+
+
+
+  <action name="theme12buildMenu">
+    
+    set(theme12button_pos, 0);
+
+	set(theme12backgroundwidthwhenclosed, 40);
+    set(layer[theme12btn_hidecontrols].x, get(theme12button_pos));
+    set(layer[theme12btn_showcontrols].x, get(theme12button_pos));
+    inc(theme12button_pos, 45);
+
+
+
+      if (device.desktop,
+        set(layer[theme12btn_display_help].x, get(theme12button_pos));
+        set(layer[theme12btn_close_help].x  , get(theme12button_pos));
+        inc(theme12button_pos, 45);
+      );
+
+      if (device.fullscreensupport,
+        set(layer[theme12btn_openfs].x , get(theme12button_pos));
+        set(layer[theme12btn_closefs].x, get(theme12button_pos));
+        inc(theme12button_pos, 45);
+      );
+
+
+
+      set(layer[theme12btn_autorotate_on].x , get(theme12button_pos));
+      set(layer[theme12btn_autorotate_off].x, get(theme12button_pos));
+      inc(theme12button_pos, 45);
+
+
+
+    if (device.desktop,
+      set(layer[theme12btn_ctrlmode_drag_to].x, get(theme12button_pos));
+      set(layer[theme12btn_ctrlmode_move_to].x, get(theme12button_pos));
+      inc(theme12button_pos, 45);
+    );
+
+
+
+      if (device.desktop,
+        set(layer[theme12btn_right].x, get(theme12button_pos));
+        inc(theme12button_pos, 45);
+        set(layer[theme12btn_left].x, get(theme12button_pos));
+        inc(theme12button_pos, 45);
+      );
+
+      if (device.desktop,
+        set(layer[theme12btn_down].x, get(theme12button_pos));
+        inc(theme12button_pos, 45);
+        set(layer[theme12btn_up].x, get(theme12button_pos));
+        inc(theme12button_pos, 45);
+      );
+      if (device.desktop,
+        set(layer[theme12btn_out].x, get(theme12button_pos));
+        inc(theme12button_pos, 45);
+        set(layer[theme12btn_in].x, get(theme12button_pos));
+        inc(theme12button_pos, 45);
+      );
+
+      if (scene.count GT 1,
+        set(layer[theme12btn_next_pano].x, get(theme12button_pos));
+        inc(theme12button_pos, 45);
+        set(layer[theme12btn_prev_pano].x, get(theme12button_pos));
+        inc(theme12button_pos, 45);
+      );
+
+      dec(theme12button_pos, 5);
+
+      set(theme12backgroundwidthwhenopened, get(theme12button_pos));
+      set(layer[theme12_menu_bg].width, get(theme12backgroundwidthwhenopened));
+	
+	
+
+    </action>
+
+	<events name="theme12StartTourEvents" onTourStart="theme12CallOnStartTour();" keep="true" />
+	
+	<action name="theme12CallOnStartTour">
+		
+		theme12showMenuControls();
+	</action>
+
+  <action name="displayImage">
+    if (%1 == null,
+      showlog();trace("Display Image : function called without any image. Verify its parameters in Panotour.");
+    ,
+    if (layer[displayedStandardImage],
+      if(layer[displayedStandardImage].doNotDeleteMe,
+        set(layer[displayedStandardImage].currentCall, false);
+        set(layer[displayedStandardImage].visible, true);
+        set(layer[displayedStandardImage].doNotDeleteMe, false);
+        
+        if (%1 == layer[displayedStandardImage].url,resumeautorotation();
+          removelayer(displayedStandardImage);
+        ,
+          setDisplayedImageObjectParameters(%1, %2, %3, %4, %5, %6);
+        );
+      ,
+        set(layer[displayedStandardImage].currentCall, true);
+        set(layer[displayedStandardImage].doNotDeleteMe, true);
+        events.dispatch(onremovedisplayedobject);
+        delayedcall(0.2,displayImage(%1, %2, %3, %4, %5, %6, %7););
+      );
+    ,
+      addlayer(displayedStandardImage);
+      set(layer[displayedStandardImage].keep, false);
+      set(layer[displayedStandardImage].onclick, resumeautorotation();removelayer(displayedStandardImage));
+      set(layer[displayedStandardImage].zorder , 99);
+      
+      set(layer[displayedStandardImage].currentCall, true);
+      set(layer[displayedStandardImage].doNotDeleteMe, true);
+      events.dispatch(onremovedisplayedobject);
+      delayedcall(0.2,displayImage(%1, %2, %3, %4, %5, %6, %7););
+      if (%7,pauseautorotation(););
+      set(layer[displayedStandardImage].visible, false);
+    );
+    );
+  </action>
+  <action name="setDisplayedImageObjectParameters">
+    set(layer[displayedStandardImage].url    , %1);
+    set(layer[displayedStandardImage].align  , %2);
+    set(layer[displayedStandardImage].x      , %3);
+    set(layer[displayedStandardImage].y      , %4);
+    set(layer[displayedStandardImage].width  , %5);
+    set(layer[displayedStandardImage].height , %6);
+  </action> 
+  <events name="displayedImageObjectEvents" keep="true" onremovedisplayedobject="displayedImageObjectOnRemoveDisplayedObject"/>
+  <action name="displayedImageObjectOnRemoveDisplayedObject">
+    ifnot(layer[displayedStandardImage].currentCall,if(layer[displayedStandardImage].visible,resumeautorotation();
+      removelayer(displayedStandardImage);
+    ););
+  </action>
+  <!-- Hide / Show Controls -->
+  <action name="hideTourControls">set(tour_displaycontrols, false);events.dispatch(hidetourcontrols);</action>
+  <action name="showTourControls">set(tour_displaycontrols, true); events.dispatch(showtourcontrols);</action>
+  <action name="displayVideo">
+    set(displayedVideoObjectToCreate, true);
+    set(displayedVideoObjectForDesktop, true);
+    if (device.tablet, set(displayedVideoObjectForDesktop, false););
+    if (device.mobile, set(displayedVideoObjectForDesktop, false););
+    
+    if (layer[displayedStandardVideo],
+      if(layer[displayedStandardVideo].donotdeleteme,
+        set(layer[displayedStandardVideo].currentCall, false);
+        set(layer[displayedStandardVideo].visible, true);
+        set(layer[displayedStandardVideo].donotdeleteme, false);
+        
+        if (%1 == layer[displayedStandardVideo].videourl,
+          layer[displayedStandardVideo].stop();resumeautorotation();
+          removelayer(displayedStandardVideo);
+        ,
+          set(layer[displayedStandardVideo].onloaded, displayVideoWhenLoaded(%1););
+          set(layer[displayedStandardVideo].url, %SWFPATH%/graphics/videoplayer.swf);
+          set(layer[displayedStandardVideo].alturl, %FIRSTXML%/graphics/videoplayer.js);
+        );
+      ,
+        set(layer[displayedStandardVideo].currentCall, true);
+        set(layer[displayedStandardVideo].donotdeleteme, true);
+        events.dispatch(onremovedisplayedobject);
+        delayedcall(0.2,displayVideo(%1, %2, %3, %4, %5, %6, %7, %8, %9););
+      );
+    ,
+      addlayer(displayedStandardVideo);
+      set(layer[displayedStandardVideo].keep, false);
+      set(layer[displayedStandardVideo].visible , false);
+      set(layer[displayedStandardVideo].onclick, displayedVideoObjectStartStopAction(););
+      set(layer[displayedStandardVideo].zorder , 98);
+      set(layer[displayedStandardVideo].align   , %2);
+      set(layer[displayedStandardVideo].x       , %3);
+      set(layer[displayedStandardVideo].y       , %4);
+      set(layer[displayedStandardVideo].width   , %5);
+      set(layer[displayedStandardVideo].height  , %6);
+      
+      if (%7,
+        set(layer[displayedStandardVideo].loop, true);
+       ,
+        set(layer[displayedStandardVideo].onvideocomplete, displayedVideoObjectStartStopAction(););
+      );
+      if (displayedVideoObjectForDesktop,
+        set(layer[displayedStandardVideo].pausedonstart, false);
+        set(layer[displayedStandardVideo].onvideoready, set(layer[displayedStandardVideo].visible, true););
+      ,
+        set(layer[displayedStandardVideo].pausedonstart, true);
+        set(layer[displayedStandardVideo].onvideoready, set(layer[displayedStandardVideo].started, false);set(layer[displayedStandardVideo].visible, true);applyDisplayedStandardVideoOverlay(%1, %2, %3, %4, %5, %6, %7, %8, %9););
+      );
+      
+      set(layer[displayedStandardVideo].currentCall, true);
+      set(layer[displayedStandardVideo].donotdeleteme, true);
+      events.dispatch(onremovedisplayedobject);
+      delayedcall(0.2,displayVideo(%1, %2, %3, %4, %5, %6, %7, %8, %9););
+      if (%8,pauseautorotation(););
+      set(layer[displayedStandardVideo].visible, false);
+    );
+  </action>
+  <action name="applyDisplayedStandardVideoOverlay">
+      addlayer(displayedStandardVideoOverlay);
+      set(layer[displayedStandardVideoOverlay].devices, "mobile|tablet");
+      set(layer[displayedStandardVideoOverlay].type, container);
+      set(layer[displayedStandardVideoOverlay].visible, true);
+      set(layer[displayedStandardVideoOverlay].zorder, 99);
+      set(layer[displayedStandardVideoOverlay].keep, false);
+      set(layer[displayedStandardVideoOverlay].align, %2);
+      set(layer[displayedStandardVideoOverlay].x, %3);
+      set(layer[displayedStandardVideoOverlay].y, %4);
+      set(layer[displayedStandardVideoOverlay].width, get(layer[displayedStandardVideo].pixelwidth));
+      set(layer[displayedStandardVideoOverlay].height, get(layer[displayedStandardVideo].pixelheight));
+      
+      addlayer(displayedStandardVideoOverlayButton);
+      set(layer[displayedStandardVideoOverlayButton].visible, true);
+      set(layer[displayedStandardVideoOverlayButton].keep, false);
+      set(layer[displayedStandardVideoOverlayButton].parent, displayedStandardVideoOverlay);
+      set(layer[displayedStandardVideoOverlayButton].align, center);
+      set(layer[displayedStandardVideoOverlayButton].url, %FIRSTXML%/graphics/videoplayer_play_button.png);
+      set(layer[displayedStandardVideoOverlayButton].width, 60);
+      set(layer[displayedStandardVideoOverlayButton].height, 60);
+      set(layer[displayedStandardVideoOverlayButton].onclick, displayedVideoObjectStartStopAction(););
+  </action>
+  <action name="displayVideoWhenLoaded">
+    layer[displayedStandardVideo].playVideo(%1);
+  </action>
+  <action name="displayedVideoObjectStartStopAction" devices="desktop">
+    layer[displayedStandardVideo].stop();
+    set(layer[displayedStandardVideo].visible, false);resumeautorotation();
+    removelayer(displayedStandardVideo);
+  </action>
+  <action name="displayedVideoObjectStartStopAction" devices="mobile|tablet">
+    if (layer[displayedStandardVideo].started == false,
+      set(layer[displayedStandardVideo].visible , true);
+      set(layer[displayedStandardVideoOverlay].visible , false);
+      set(layer[displayedStandardVideo].started, true);
+      layer[displayedStandardVideo].play();
+    ,
+      layer[displayedStandardVideo].stop();
+      set(layer[displayedStandardVideo].visible , false);resumeautorotation();
+      removelayer(displayedStandardVideo);
+    );
+  </action>
+  <events name="displayedVideoObjectEvents" keep="true" onremovedisplayedobject="displayedVideoObjectOnRemoveDisplayedObject"/>
+  <action name="displayedVideoObjectOnRemoveDisplayedObject">
+    ifnot(layer[displayedStandardVideo].currentCall,if(layer[displayedStandardVideo].visible,
+      layer[displayedStandardVideo].stop();
+      set(layer[displayedStandardVideo].visible , false);resumeautorotation();
+      removelayer(displayedStandardVideo);
+    ););
+  </action>
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+</krpano>
